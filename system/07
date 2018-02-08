@@ -1,0 +1,1 @@
+ps x | grep ssh | sed 's/\ *//;s/[^0-9].*//' | sed -n 1p

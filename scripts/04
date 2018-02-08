@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DERNIERE_MODIF=$(cat /root/dernieremodif)
+FICHIER_VERIFIE=$(md5sum /etc/crontab)
+
+if [ "${DERNIERE_MODIF}" != "${FICHIER_VERIFIE}" ]; then
+	echo "Fichier modifie" | mail -s "Modifs" root
+	md5sum /etc/crontab > /root/dernieremodif
+fi

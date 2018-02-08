@@ -1,0 +1,2 @@
+'nslookup 10.51.1.253' indique que le nom du serveur est 'dhcp.42.fr'
+Il s'agit d'un serveur dhcp - protocole de configuration dynamique des hotes.
